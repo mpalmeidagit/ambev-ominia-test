@@ -1,0 +1,41 @@
+name: Valid PR that works on all operation systems 
+
+on:
+  pull_request:
+    branches: develop
+
+jobs:
+  ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup .Net
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.x'
+      - name: Build Project
+        run: dotnet build ./Ambev.DeveloperEvaluation.sln
+      - name: Test Project
+        run: dotnet test ./Ambev.DeveloperEvaluation.sln
+  windows:
+    runs-on: windows-latest
+    steps:
+      - name: Setup .Net
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.x'
+      - name: Build Project
+        run: dotnet build ./Ambev.DeveloperEvaluation.sln
+      - name: Test Project
+        run: dotnet test ./Ambev.DeveloperEvaluation.sln
+  macos:
+    runs-on: macos-latest
+    steps:
+      - name: Setup .Net
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.x'
+      - name: Build Project
+        run: dotnet build ./Ambev.DeveloperEvaluation.sln
+      - name: Test Project
+        run: dotnet test ./Ambev.DeveloperEvaluation.sln
+          
