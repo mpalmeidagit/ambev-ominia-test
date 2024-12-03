@@ -7,13 +7,13 @@ public class StockValidator : AbstractValidator<Stock>
 {
   public StockValidator()
   {
-    RuleFor(product => product.quantity)
+    RuleFor(saleProduct => saleProduct.Quantity)
       .NotEmpty()
       .WithMessage("quantity is required");
-    RuleFor(product => product.brancheId)
+    RuleFor(saleProduct => saleProduct.BranchId)
       .NotEmpty()
-      .WithMessage("brancheId is required");
-    RuleFor(product => product.quantity)
+      .WithMessage("branchId is required");
+    RuleFor(saleProduct => saleProduct.Quantity)
       .NotEmpty()
       .WithMessage("quantity is required");
   }

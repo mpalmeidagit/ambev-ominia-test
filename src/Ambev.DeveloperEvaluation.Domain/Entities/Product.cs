@@ -11,9 +11,9 @@ namespace Ambev.DeveloperEvaluation.Domain.Entities;
 /// </summary>
 public class Product : BaseEntity
 {
-  public string name { get; set; }
-  public string description { get; set; }
-  public float price { get; set; }
+  public string Name { get; set; }
+  public string Description { get; set; }
+  public float Price { get; set; }
   /// <summary>
   /// Performs validation of the user entity using the UserValidator rules.
   /// </summary>

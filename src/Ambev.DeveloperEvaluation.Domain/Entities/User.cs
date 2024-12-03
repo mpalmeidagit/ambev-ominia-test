@@ -49,8 +49,8 @@ public class User : BaseEntity, IUser
     /// Indicates whether the user is active, inactive, or blocked in the system.
     /// </summary>
     public UserStatus Status { get; set; }
-    public Branch? branch { get; set; }
-    public ICollection<Sale>? sales { get; set; }
+    public Branch? Branch { get; set; }
+    public ICollection<Sale> Sales { get; } = new List<Sale>();
 
     /// <summary>
     /// Gets the unique identifier of the user.

@@ -7,10 +7,10 @@ public class ProductValidator : AbstractValidator<Product>
 {
   public ProductValidator()
   {
-    RuleFor(product => product.name)
+    RuleFor(product => product.Name)
       .NotEmpty()
       .WithMessage("name is required");
-    RuleFor(product => product.price)
+    RuleFor(product => product.Price)
       .NotEmpty()
       .WithMessage("price is required");
   }

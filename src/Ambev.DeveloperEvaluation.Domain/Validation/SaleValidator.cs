@@ -7,15 +7,15 @@ public class SaleValidator : AbstractValidator<Sale>
 {
   public SaleValidator()
   {
-    RuleFor(sale => sale.userClientId)
+    RuleFor(sale => sale.UserClientId)
       .NotEmpty()
       .WithMessage("userClientId is required");
     
-    RuleFor(sale => sale.brancheId)
-      .NotEmpty()
-      .WithMessage("brancheId is required");
+    // RuleFor(sale => sale.BranchId)
+    //   .NotEmpty()
+    //   .WithMessage("branchId is required");
       
-    RuleFor(sale => sale.saleValue)
+    RuleFor(sale => sale.SaleValue)
       .NotEmpty()
       .WithMessage("saleValue is required");
   }

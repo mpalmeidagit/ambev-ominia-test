@@ -7,7 +7,7 @@ public class BranchValidator : AbstractValidator<Branch>
   {
     public BranchValidator()
     {
-      RuleFor(branch => branch.userManagerId)
+      RuleFor(branch => branch.UserManagerId)
         .NotEmpty()
         .WithMessage("userManagerId is required");
     }

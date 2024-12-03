@@ -11,11 +11,11 @@ namespace Ambev.DeveloperEvaluation.Domain.Entities;
 /// </summary>
 public class SaleProduct : BaseEntity
 {
-  public Guid saleId { get; set; }
-  public Sale? sale { get; set; } = null!;
-  public string productName { get; set; } = string.Empty;
-  public float? discount { get; set; }
-  public float valueTotal { get; set; }
+  public Guid SaleId { get; set; }
+  public Sale? Sale { get; set; } = null!;
+  public string ProductName { get; set; } = string.Empty;
+  public float? Discount { get; set; }
+  public float ValueTotal { get; set; }
   /// <summary>
   /// Performs validation of the user entity using the UserValidator rules.
   /// </summary>

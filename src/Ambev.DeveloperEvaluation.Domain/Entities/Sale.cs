@@ -11,14 +11,14 @@ namespace Ambev.DeveloperEvaluation.Domain.Entities;
 /// </summary>
 public class Sale : BaseEntity
 {
-  public Guid userClientId { get; set; }
-  public User? client { get; set; } = null!;
-  public Guid brancheId { get; set; }
-  public Branch? branch { get; set; } = null!;
-  public ICollection<SaleProduct>? salesProduct { get; set; } = new List<SaleProduct>();
-  public float saleValue { get; set; }
-  public bool cancelled { get; set; }
-  public bool finished { get; set; }
+  public Guid UserClientId { get; set; }
+  public User? Client { get; set; } = null!;
+  public Guid BranchId { get; set; }
+  public Branch Branch { get; set; } = null!;
+  public ICollection<SaleProduct> SalesProducts { get; } = new List<SaleProduct>();
+  public float SaleValue { get; set; }
+  public bool Cancelled { get; set; }
+  public bool Finished { get; set; }
   /// <summary>
   /// Performs validation of the user entity using the UserValidator rules.
   /// </summary>
@@ -30,7 +30,7 @@ public class Sale : BaseEntity
   /// <remarks>
   /// <listheader>The validation includes checking:</listheader>
   /// <list type="bullet">userClientId format and length</list>
-  /// <list type="bullet">brancheId format</list>
+  /// <list type="bullet">branchId format</list>
   /// <list type="bullet">saleValue number format</list>
   /// <list type="bullet">cancelled complexity requirements</list>
   /// <list type="bullet">finished validity</list>

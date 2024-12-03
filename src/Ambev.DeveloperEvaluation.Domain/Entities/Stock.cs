@@ -11,11 +11,11 @@ namespace Ambev.DeveloperEvaluation.Domain.Entities;
 /// </summary>
 public class Stock : BaseEntity
 {
-  public Guid productId { get; set; }
-  public ICollection<Product>? products { get; set; }
-  public Guid brancheId { get; set; }
-  public Branch? branch { get; set; }
-  public float quantity { get; set; }
+  public Guid ProductId { get; set; }
+  public ICollection<Product> Products { get; } = new List<Product>();
+  public Guid BranchId { get; set; }
+  public ICollection<Branch> Branch { get; } = new List<Branch>();
+  public float Quantity { get; set; }
   /// <summary>
   /// Performs validation of the user entity using the UserValidator rules.
   /// </summary>
@@ -27,7 +27,7 @@ public class Stock : BaseEntity
   /// <remarks>
   /// <listheader>The validation includes checking:</listheader>
   /// <list type="bullet">productId format and length</list>
-  /// <list type="bullet">brancheId format</list>
+  /// <list type="bullet">branchId format</list>
   /// <list type="bullet">quantity number format</list>
   /// 
   /// </remarks>

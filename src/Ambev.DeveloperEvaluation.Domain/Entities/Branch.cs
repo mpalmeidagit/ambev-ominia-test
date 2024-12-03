@@ -11,10 +11,10 @@ namespace Ambev.DeveloperEvaluation.Domain.Entities;
 /// </summary>
 public class Branch : BaseEntity
 {
-  public Guid userManagerId { get; set; }
-  public User manager { get; set; } = null!;
-  public ICollection<Sale> sales { get; } = new List<Sale>();
-  public Stock stock { get; } = null!;
+  public Guid UserManagerId { get; set; }
+  public User Manager { get; set; } = null!;
+  public ICollection<Sale> Sales { get; } = new List<Sale>();
+  public Stock Stock { get; } = null!;
   /// <summary>
   /// Performs validation of the user entity using the UserValidator rules.
   /// </summary>
