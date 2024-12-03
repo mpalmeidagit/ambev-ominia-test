@@ -12,17 +12,19 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: '8.x'
+      - uses: actions/checkout@v4
       - name: Build Project
-        run: dotnet build Ambev.DeveloperEvaluation.sln
+        run: dotnet build ./Ambev.DeveloperEvaluation.sln
       - name: Test Project
-        run: dotnet test Ambev.DeveloperEvaluation.sln
+        run: dotnet test ./Ambev.DeveloperEvaluation.sln
   windows:
     runs-on: windows-latest
     steps:
       - name: Setup .Net
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '8.x'
+          dotnet-version: '8.x'          
+      - uses: actions/checkout@v4
       - name: Build Project
         run: dotnet build ./Ambev.DeveloperEvaluation.sln
       - name: Test Project
@@ -34,6 +36,7 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: '8.x'
+      - uses: actions/checkout@v4
       - name: Build Project
         run: dotnet build ./Ambev.DeveloperEvaluation.sln
       - name: Test Project
