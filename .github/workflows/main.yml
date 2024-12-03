@@ -13,9 +13,9 @@ jobs:
         with:
           dotnet-version: '8.x'
       - name: Build Project
-        run: dotnet build ./Ambev.DeveloperEvaluation.sln
+        run: dotnet build Ambev.DeveloperEvaluation.sln
       - name: Test Project
-        run: dotnet test ./Ambev.DeveloperEvaluation.sln
+        run: dotnet test Ambev.DeveloperEvaluation.sln
   windows:
     runs-on: windows-latest
     steps:
